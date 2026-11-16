@@ -4,12 +4,15 @@ An original, browser-playable first-person survival shooter prototype. It is a l
 
 ## Run locally
 
-1. Install a current Node.js release.
-2. Clone this repository.
-3. Serve the repository root with any static development server (for example, `npx vite --host 0.0.0.0` after installing Vite locally, or another static server).
-4. Open the local URL in a modern browser with WebGL support.
+1. Install [Visual Studio Code](https://code.visualstudio.com/) if you do not already have an editor.
+2. Clone this repository and open its folder in VS Code.
+3. Install the free **Live Server** extension in VS Code.
+4. Right-click `index.html` and choose **Open with Live Server**.
+5. Open the local address shown by VS Code in a modern browser with WebGL support.
 
-The current prototype is a single `index.html` and does not require a build step. Internet access is required to load Three.js from the CDN.
+Alternative: if Python is installed, run `python -m http.server 5173` in the project folder and open `http://localhost:5173`.
+
+This is a static, single-file prototype: no `npm install` or build step is required. Internet access is required to load Three.js from the CDN.
 
 ## Controls
 
@@ -19,7 +22,7 @@ The current prototype is a single `index.html` and does not require a build step
 
 ## Dependencies and licenses
 
-- [Three.js 0.160.0](https://threejs.org/) is loaded as an ES module from [jsDelivr](https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js). Three.js is distributed under the MIT License. The CDN is an external runtime dependency; no API key or paid service is used.
+- [Three.js 0.160.0](https://threejs.org/) is loaded as an ES module from [jsDelivr](https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js). Three.js is distributed under the [MIT License](https://github.com/mrdoob/three.js/blob/dev/LICENSE). The CDN is an external runtime dependency; no API key or paid service is used.
 - The arena geometry, prototype code, HUD and generated Web Audio tones in this repository are original project work. No third-party game characters, maps, music, sound recordings or proprietary assets are included.
 - Browser audio is generated at runtime using the Web Audio API; there are no audio-file dependencies.
 
