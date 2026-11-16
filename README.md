@@ -33,6 +33,6 @@ Prototype 08 adds cover-aware combat. Building structures block the player's hit
 ## Known limitations
 
 - Enemy navigation is still lightweight steering, not full pathfinding; bots can occasionally hesitate around obstacles.
-- Cover checks currently use the main building meshes. Smaller crates, barrels and trees are not full ballistic cover.
+- Cover checks use the main building meshes for bullets and grenade blast damage. Smaller crates, barrels and trees are not full ballistic cover. Grenades still do not physically collide with building geometry while travelling.
 - This is not online multiplayer. A future multiplayer version needs a dedicated authoritative server or a separate networking backend for movement, hit validation, matchmaking and anti-cheat.
 - Browser performance and touch controls vary by device. Test on target Android phones and desktop browsers before treating a milestone as stable.
