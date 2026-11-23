@@ -28,11 +28,11 @@ This is a static, single-file prototype: no `npm install` or build step is requi
 
 ## Current milestone
 
-Prototype 08 adds cover-aware combat. Building structures block the player's hitscan shots and prevent enemy bots from firing through walls. The game remains single-player and browser-based.
+Prototype 09 adds obstacle-aware enemy navigation. Bots use a lightweight visibility-graph route planner to move around the main building rectangles, with collision checks and safer spawn placement. Existing cover-aware shooting, enemy line of sight, grenades, pickups and the shrinking safe zone remain in place. The game remains single-player and browser-based.
 
 ## Known limitations
 
-- Enemy navigation is still lightweight steering, not full pathfinding; bots can occasionally hesitate around obstacles.
+- Enemy navigation uses a lightweight visibility graph around the main building rectangles, not a full navmesh or dynamic pathfinding system; bots can still hesitate if crowded or forced into unusual positions.
 - Cover checks use the main building meshes for bullets and grenade blast damage. Smaller crates, barrels and trees are not full ballistic cover. Grenades still do not physically collide with building geometry while travelling.
 - This is not online multiplayer. A future multiplayer version needs a dedicated authoritative server or a separate networking backend for movement, hit validation, matchmaking and anti-cheat.
 - Browser performance and touch controls vary by device. Test on target Android phones and desktop browsers before treating a milestone as stable.
